@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/reportng.css" />
+	<script type="text/javascript">  
+    	$(document).ready(function () {  
+	            $('tr.parent')  
+	                .css("cursor", "pointer")  
+	                .attr("title", "Click to expand/collapse")  
+	                .click(function () {  
+	                    $(this).siblings('.child-' + this.id).toggle();  
+	                });
+	                $('tr.parent')  
+	                .css("cursor", "pointer")  
+	                .attr("title", "Click to expand/collapse")  
+	                .click();
+	    });
+	    function changeIcon(elementId) {
+			if ($('#'+elementId).hasClass('glyphicon glyphicon-minus')){
+				$('#'+elementId).removeClass('glyphicon glyphicon-minus').toggleClass('glyphicon glyphicon-plus');
+			}else{
+				$('#'+elementId).removeClass('glyphicon glyphicon-plus').toggleClass('glyphicon glyphicon-minus');
+			}
+		}
+		function showReport(element,report){$(element).children(".tipFrame").attr('src', report).show();}
+		function hideReport(element){$(element).children(".tipFrame").hide();}
+    </script>
+</head>
+<body>
+<h3 class="failTitle">New</h3>
+<div>
+	<div class="well well-large">
+	<h4>Regression Issues</h4>
+		<table class="table table-bordered" width="100%;" id="features">
+			<thead>
+				<tr>
+					<th scope="col" width="30px">#</th>
+					<th scope="col">Issue</th>
+					<th scope="col" colspan="2">Total Affected Tests</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="parent" id="row0" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-e5b92f77-89bd-4a33-bf19-298664e2127b'); ">
+<td><span id="span-e5b92f77-89bd-4a33-bf19-298664e2127b" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">Error communicating with the remote browser. It may have died.
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9920f005fc795b7fd685c5399ae06bbd, findElement [using, value]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.189, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54048/devtoo..., se:cdpVersion: 121.0.6167.189, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9920f005fc795b7fd685c5399ae06bbd</td><td>1</td><td></td></tr><tr class="child-row0" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row0" style="display: table-row;"><td></td><td><a href="suites_overview.html#Suite1">Suite1</a></td><td><a href="suite1_test1_results.html">Regression1</a></td><td class="break-word">Selenium.VerifyLogin5</td></tr>
+<tr class="parent" id="row1" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-2acf77be-a756-4812-a911-c52dd4d69c55'); ">
+<td><span id="span-2acf77be-a756-4812-a911-c52dd4d69c55" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">expected [true] but found [false]</td><td>1</td><td></td></tr><tr class="child-row1" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row1" style="display: table-row;"><td></td><td><a href="suites_overview.html#Suite1">Suite1</a></td><td><a href="suite1_test1_results.html">Regression1</a></td><td class="break-word">Selenium.VerifyLogin5</td></tr>
+<tr class="parent" id="row2" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-7d8b8fa6-3075-4006-8d74-99ec0c3cad89'); ">
+<td><span id="span-7d8b8fa6-3075-4006-8d74-99ec0c3cad89" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">stale element reference: stale element not found
+  (Session info: chrome=121.0.6167.189)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9920f005fc795b7fd685c5399ae06bbd, clickElement {id=4F12B3822EE89F766FAF8E15E65FBAE0_element_13}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.189, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54048/devtoo..., se:cdpVersion: 121.0.6167.189, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9920f005fc795b7fd685c5399ae06bbd)] -&gt; xpath: //*[@id=&quot;login&quot;]/button]
+Session ID: 9920f005fc795b7fd685c5399ae06bbd</td><td>1</td><td></td></tr><tr class="child-row2" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row2" style="display: table-row;"><td></td><td><a href="suites_overview.html#Suite1">Suite1</a></td><td><a href="suite1_test1_results.html">Regression1</a></td><td class="break-word">Selenium.VerifyLogin4</td></tr>
+<tr class="parent" id="row3" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-cdd9e8b1-e8bc-45e8-9db1-f3916e2462db'); ">
+<td><span id="span-cdd9e8b1-e8bc-45e8-9db1-f3916e2462db" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">stale element reference: stale element not found
+  (Session info: chrome=121.0.6167.189)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9920f005fc795b7fd685c5399ae06bbd, sendKeysToElement {value=[Ljava.lang.CharSequence;@7265e0c, id=78E484AF2960E2DBF05A14178C2B5065_element_29}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.189, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54048/devtoo..., se:cdpVersion: 121.0.6167.189, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9920f005fc795b7fd685c5399ae06bbd)] -&gt; name: username]
+Session ID: 9920f005fc795b7fd685c5399ae06bbd</td><td>1</td><td></td></tr><tr class="child-row3" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row3" style="display: table-row;"><td></td><td><a href="suites_overview.html#Suite1">Suite1</a></td><td><a href="suite1_test1_results.html">Regression1</a></td><td class="break-word">Selenium.VerifyLogin4</td></tr>
+
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="well well-large">
+	<h4>New Features Issues</h4>
+		<table class="table table-bordered" width="100%;" id="features">
+			<thead>
+				<tr>
+					<th scope="col" width="30px">#</th>
+					<th scope="col">Issue</th>
+					<th scope="col" colspan="2">Total Affected Tests</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr style="display: table-row;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+			</tbody>
+		</table>
+	</div>
+	
+</div>	
+</body>
+</html>
